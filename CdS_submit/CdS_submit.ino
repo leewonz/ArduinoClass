@@ -34,15 +34,8 @@ void loop() {
     cdsValue_Mapped = constrain(cdsValue_Mapped, INPUT_MAX, INPUT_MIN);
   }
   cdsValue_Mapped = map(cdsValue_Mapped, INPUT_MIN, INPUT_MAX, OUTPUT_MIN, OUTPUT_MAX);
-  //cdsValue_Mapped = map_pow(cdsValue_Mapped, OUTPUT_MIN, OUTPUT_MAX, 2);
-
+  
   //write to LED
   analogWrite(led, cdsValue_Mapped);
   
-}
-
-// map some value to power of that value
-float map_pow(float val, float valMin, float valMax, float exponent)
-{
-  return pow((val - valMin) / (valMax - valMin), exponent) * (valMax - valMin) + valMin;
 }
