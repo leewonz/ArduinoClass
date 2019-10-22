@@ -1,8 +1,9 @@
 #include <Servo.h>
 
 
+Servo servo;
 
-const int PIN_CDS = A0;
+const int PIN_DYN = A0;
 const int PIN_PWM = 3;
 
 void setup() {
@@ -11,10 +12,10 @@ void setup() {
 }
 
 void loop() {
-  int cdsValue = analogRead(PIN_CDS);
+  int dynValue = analogRead(PIN_DYN);
 
-  cdsValue = map(cdsValue, 0, 1023, 0, 180);
+  dynValue = map(dynValue, 0, 1023, 0, 180);
   
-  servo.write(cdsValue);
+  servo.write(dynValue);
 
 }
