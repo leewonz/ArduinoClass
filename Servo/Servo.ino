@@ -23,7 +23,7 @@ void loop() {
 
   for (pos = 0; pos <= 99999; pos++)
   {
-    servo.write((sin(pos * 0.05)) * 90 + 90);
+    servo.write((sin(pos * 0.04)) * 90 + 90);
     delay(1);
   }
 }
