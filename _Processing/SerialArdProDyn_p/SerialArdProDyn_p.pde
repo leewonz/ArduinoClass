@@ -22,7 +22,7 @@ void setup()
 void draw()
 {
   background(c);
-  text("light level", 10, 100);
+  text("knob level", 10, 100);
  
   text(light, 200, 100);
  

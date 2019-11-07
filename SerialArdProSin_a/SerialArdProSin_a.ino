@@ -12,6 +12,7 @@ void setup()
 void loop()
 {
   val = analogRead(LDR);
+  val = map(val, 500, 1023, 0, 1023);
   Serial.println(val);
   analogWrite(LED, val/4);
   if (Serial.available() >0)
